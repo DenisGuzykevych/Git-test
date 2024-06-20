@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Delivery</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.ico">
+    <link rel="stylesheet" type ="text/css" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+        * {
+    font-family: 'Comfortaa', cursive;
+  }
+  .image {
+      border-radius: 40px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 1;
+    padding: 0;
+    color: black;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 150px; 
+    justify-content: center; 
+    margin:auto;
+    width:1200px;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  .image img{ 
+    border-radius: 25px;
+    width: 280;
+    height: 250;
+    margin-bottom: 2px;
+  }
+  hr {
+    border: none;
+    background-color: black; 
+    height: 3px; 
+    border-radius: 10px; 
+    width: 1700px;
+}
+.navbar {
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-man-buttons{
+  margin-right:100px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  color:black;
+  display: inline;
+  margin-right: 20px;
+}
+.search-form {
+  text-align: center; 
+}
+
+.search-container {
+  display: inline-block; 
+  border: 2px solid black; 
+  border-radius: 20px; 
+  overflow: hidden;
+}
+
+.search-container input {
+  border: none;
+  padding: 10px;
+  outline: none; 
+}
+
+.search-container button {
+  border: none; 
+  background-color: transparent; 
+  padding: 5px; 
+}
+
+.search-container button img {
+  vertical-align: middle; 
+}
+.nav-links a {
+  color: black; 
+  text-decoration: none; 
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+header{
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+.order-button button {
+  height: 35px;
+  width: 110px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.order-button button:hover{ 
+  background-color: white;
+  color:black;
+  border: 2px solid black;
+  height: 35px;
+  width: 110px;
+}
+.orders {
+  overflow:auto;
+  margin: 0 auto;
+  width: 280px;
+  text-align: center;
+  float:left;
+}
+.orders-title{
+  padding-bottom: 5px;
+}
+.main-title{
+  font-size: 160%;
+}
+.title-container{
+  width:580px;
+  margin: 140px 0 300px 180px;
+  float: left;
+}
+.main-offer{
+    margin-left: 0; 
+    margin-right: auto; 
+    width: 630px;
+    float: right;
+    margin-top:80px;
+    padding-right:120px;
+    text-align: center;
+}
+.main-button{
+  height: 50px;
+  width: 450px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  font-size:110%;
+}
+.main-button:hover{
+  background-color: white;
+  color:black;
+  border: 2px solid black;
+}
+.main-img{
+  margin-top:30px;
+  margin-bottom:30px;
+  border-radius: 20px;
+  height: auto;
+  width: auto;
+}
+.main-order-button{
+  height: 50px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.main-order-button:hover{ 
+  background-color: white;
+  color:black;
+  border: 2px solid black;
+}
+.steps{
+  overflow:auto;
+  margin: 40px auto;
+  width: 280px;
+  text-align: center;
+  float:left;
+  padding-bottom: 30px;
+}
+.steps p{
+  font-size:larger;
+}
+.feedback-container{
+  overflow:auto;
+  width: 1300px;
+  height:210px;
+  text-align: center;
+}
+.feedback{
+  text-align: left;
+}
+.feedback img{
+  float:left;
+  margin-right: 20px;
+}
+.feedback input{
+  border: 2px solid black;
+  border-radius: 20px;
+  height:100px;
+  width: 1200px;
+  text-align: left; 
+  background-color: rgb(212, 208, 208);
+  font-size:105%;
+}
+.feedback-button{
+  height: 35px;
+  width: 140px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top:10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.feedback-button:hover{
+  background-color: white;
+  color:black;
+  border: 2px solid black;
+  height: 35px;
+  width: 140px;
+}
+.feedback button{
+  margin-left:70px;
+}
+.feedback-rectangle {
+  height: 100px;
+  width: 1200px;
+  background-color: rgb(212, 208, 208);
+  border: 2px solid black;
+  text-align: left;
+  border-radius: 20px;
+  float: left;
+  line-height: 60px; 
+}
+.feedback-rectangle p {
+  margin-left: 5px;
+}
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mail{
+  text-align: center;
+}
+.mail img{
+  width:80px;
+  height: 80px;
+}
+.social-networks{
+  text-align: center;
+}
+.social-networks img{
+  width:80px;
+  height: 80px;
+}
+.phone-number {
+  text-align: center;
+  width:auto;
+  margin-right:100px;
+}
+.feedback-image{
+  margin: 60px 0px 60px 60px;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%; 
+    margin: auto;
+}
+
+  .navbar {
+      flex-direction: column;
+      padding: 10px; 
+  }
+  .search-container {
+    display: inline-block; 
+    width: 200px; 
+    height: 30px; 
+    border: 2px solid black; 
+    border-radius: 20px; 
+    overflow: hidden;
+}
+.search-container input {
+  border: none;
+  padding: 5px; 
+  outline: none; 
+  width: 75%; 
+}
+.search-container button {
+  border: none; 
+  background-color: transparent; 
+  padding: 5px; 
+}
+.search-container button img {
+  vertical-align: middle; 
+}
+  .orders img{
+    height: 70%;
+    width: 70%;
+  }
+
+  .nav-man-buttons {
+      margin-right: 0;
+      gap: 20px;
+  }
+
+  .search-container {
+      width: 50%;
+      height: 50%;
+  }
+
+
+  .main-offer {
+      width: 100%;
+      padding-right: 0;
+      text-align: center; 
+  }
+
+  .orders, .steps {
+      width: 90%; 
+      margin: 20px auto;
+  }
+
+  .feedback-container {
+      width: 90%; 
+      padding: 0 10px; 
+  }
+
+  .feedback-rectangle {
+      width: 100%;
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mail{
+    text-align: center;
+  }
+  .mail img{
+    width:80px;
+    height: 80px;
+  }
+  .social-networks{
+    text-align: center;
+  }
+  .social-networks img{
+    width:80px;
+    height: 80px;
+  }
+  .phone-number {
+    text-align: center;
+    width:auto;
+    margin-right:100px;
+  }
+  .main-img{
+    height: 50%;
+    width: 50%;
+  }
+  .feedback-image img{
+    width: 80%;
+    height: 80%;
+  }
+  .image img{
+    height: 150px;
+    width: 180px;
+  }
+  .title-container{
+    width: 300px;
+  }
+  hr{
+    width: 40%;
+  }
+  .main-title{
+    font-size: 80%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .search-form {
+    text-align: center; 
+}
+}
+@media only screen and (max-width: 1242px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 150px;
+    width: 90%; 
+    margin: auto;
+}
+
+  .navbar {
+      flex-direction: column; 
+      padding: 10px; 
+  }
+  .nav-man-buttons{
+    display: none;
+  }
+  .search-container {
+    display: inline-block; 
+    width: 200px; 
+    height: 30px; 
+    border: 2px solid black; 
+    border-radius: 20px; 
+    overflow: hidden;
+}
+.search-container input {
+  border: none;
+  padding: 5px; 
+  outline: none; 
+  width: 75%; 
+}
+.search-container button {
+  border: none; 
+  background-color: transparent; 
+  padding: 5px; 
+}
+.search-container button img {
+  vertical-align: middle; 
+}
+  .orders img{
+    height: 70%;
+    width: 70%;
+  }
+
+  .nav-man-buttons {
+      margin-right: 0;
+      gap: 20px;
+  }
+
+  .search-container {
+      width: 50%;
+      height: 50%;
+  }
+
+
+  .main-offer {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+  }
+
+  .orders, .steps {
+      width: 90%; 
+      margin: 20px auto;
+  }
+
+  .feedback-container {
+      width: 90%; 
+      padding: 0 10px;
+  }
+
+  .feedback-rectangle {
+      width: 100%; 
+  }
+
+  .footer-container {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .mail img, .social-networks img {
+      width: 60px; 
+      height: 60px;
+  }
+
+  .phone-number {
+      margin: 0; 
+  }
+  .main-img{
+    height: 50%;
+    width: 50%;
+  }
+  .feedback-image img{
+  display: none;
+  }
+  .image img{
+    height: 150px;
+    width: 180px;
+  }
+  .title-container{
+    margin-left: 0;
+    margin: auto;
+    text-align: center;
+    float: none;
+  }
+  .main-offer-inside{
+    text-align: center;
+    margin: auto;
+  }
+  .main-offer-inside button{
+    text-align: center;
+  }
+  .main-button{
+    width: 80%;
+    height:90%;
+  }
+  hr{
+    width: 40%;
+  }
+  .main-title{
+    font-size: 80%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .search-form {
+    text-align: center; 
+    
+}
+.feedback input{
+  width: 99%;
+}
+}
+@media only screen and (max-width: 1542px) {
+  .title-container {
+    margin: 0 auto; 
+    text-align: center; 
+}
+  .main-offer{
+    padding: 0;
+    margin: auto;
+  }
+  .main-img{
+    margin-bottom: 0;
+  }
+  .main-offer-inside{
+    text-align: center;
+  }
+  .main-order-button{
+    height: 90%;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .main-button button{
+    width: 80%;
+  } 
+  .feedback-rectangle p{
+    font-size: 80%;
+    line-height: 30px;
+  }
+  .feedback input{
+    width: 99%;
+  }
+  .feedback-rectangle {
+    width: 99%; 
+}
+.feedback-container{
+  width: 95%;
+}
+hr{
+  width: 80%;
+}
+}
+@media only screen and (max-width: 1920px) {
+  hr{
+    width: 90%;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="navbar">
+            <a href="/Code/index.html"><img src="Images/Логотип.svg" alt="logo" width="200" height="90""></a>
+            <ul class="nav-links">
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Акції</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Партнери</a></li>
+            </ul>
+            <form class="search-form">
+                <div class="search-container">
+                    <input type="text" placeholder="Пошук...">
+                    <button><img src="Images/icons8-search-48.png" height="15" width="15" alt="Пошук"></button>
+                </div>
+            </form>
+            <div class="nav-man-buttons">
+                <img src="Images/Кошик.svg" alt="bin" href="">
+                <img src="Images/Фото профілю.svg" alt="profile" href="">
+            </div>
+        </div>
+        <hr>
+    </nav>
+</header>
+    <!--  -->
+    <main>
+    <div class="title-container">
+        <div class="main-title">
+            <h1>Спробуйте бургери!</h1>
+            <h3>Скуштуй неперевершений бургер від нашого закладу! Соковите м'ясо, хрустка зелень та свіжі овочі - це все, що тобі потрібно для задоволення свого голоду.</h3>
+        </div>
+    </div>
+    <div class="main-offer">
+        <button class="main-button" type="button">Вперше на сайті? Зареєструйся зараз!</button>
+        <div>
+            <img class="main-img"src="Images\Categories\Снимок экрана 2023-04-12 203950.png" alt="Burger">
+            <button class="main-order-button">Замовити зараз</button>
+        </div>
+    </div>
+    <hr>
+    <h1 style="margin-top: 70px; margin-left: 100px; font-size: 200%;">Категорії товарів</h1>
+    <div class="container">
+        <div class="orders">
+            <h2 class="orders-title">Бургери</h2>
+            <div class="image">
+                <img src="Images/Categories/Снимок экрана 2023-04-12 203950.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Піца</h2>
+            <div class="image">
+                <img src="Images/Categories/Снимок экрана 2023-04-12 205505.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=USE86UbsV8c" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Суші</h2>
+            <div class="image">
+                <img src="Images/Categories/Снимок экрана 2023-04-12 204806.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=vGLLVQ6qePs" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="orders">
+            <h2 class="orders-title">Напої</h2>
+            <div class="image">
+                <img src="Images/Categories/Снимок экрана 2023-04-12 205212.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=Y_6fqQDYTJk" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Десерти</h2>
+            <div class="image">
+                <img src="Images/Categories/Снимок экрана 2023-04-12 205229.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=USE86UbsV8c" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Шаурма</h2>
+            <div class="image">
+                <img src="Images/Categories/Снимок экрана 2023-04-12 204114.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=vGLLVQ6qePs" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 70px; margin-bottom:70px;">
+    <h1 style="margin-top: 70px; margin-left: 100px; font-size: 200%;">Ресторани партнери</h1>
+    <div class="container">
+        <div class="orders">
+            <h2 class="orders-title">Tasty Heaven</h2>
+            <div class="image">
+                <img src="Images/Restaurants/Rectangle 2.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=Y_6fqQDYTJk" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Dr Ramak</h2>
+            <div class="image">
+                <img src="Images/Restaurants/Снимок экрана 2023-04-12 211547.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=USE86UbsV8c" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">The Grill</h2>
+            <div class="image">
+                <img src="Images/Restaurants/Снимок экрана 2023-04-12 211832.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=vGLLVQ6qePs" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="orders">
+            <h2 class="orders-title">Sugar Bliss</h2>
+            <div class="image">
+                <img src="Images/Restaurants/Снимок экрана 2023-04-12 211849.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=Y_6fqQDYTJk" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Mister Burger</h2>
+            <div class="image">
+                <img src="Images/Restaurants/Снимок экрана 2023-04-12 211912.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=USE86UbsV8c" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orders">
+            <h2 class="orders-title">Sushihouse</h2>
+            <div class="image">
+                <img src="Images/Restaurants/Снимок экрана 2023-04-12 212141.png" alt="Крабсбургер" width="280" height="250">
+                <div class="order-button">
+                    <a href="https://www.youtube.com/watch?v=vGLLVQ6qePs" target="_blank">
+                        <button type="button">Перейти</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 70px; margin-bottom:70px;">
+    <h1 style="margin-top: 70px; margin-left: 100px; font-size: 200%;">Оплата та доставка</h1>
+    <div class="container">
+        <div class="steps">
+            <img src="Images/Steps/Group 12.svg" alt="1">
+            <p>Ви замовляєте їжу через каталог</p>
+        </div>
+        <div class="steps">
+            <img src="Images/Steps/Group 13.svg" alt="2">
+            <p>Ви оплачуєте товар через картку VISA або MC, або Приват24</p>
+        </div>
+        <div class="steps">
+            <img src="Images/Steps/Group 14.svg" alt="3">
+            <p>Вам передзвонять наші менеджери, якщо потрібно щось уточнити</p>
+        </div>
+        <div class="steps">
+            <img src="Images/Steps/Group 15.svg" alt="4">
+            <p>Надходить повідомлення про те що замовлення підтверджено</p>
+        </div>
+        <div class="steps">
+            <img src="Images/Steps/Group 16.svg" alt="5">
+            <p>Доставляємо їжу одержувачу протягом 2-х годин</p>
+        </div>
+        <div class="steps">
+            <img src="Images/Steps/Group 17.svg" alt="6">
+            <p>Сповістимо Вас дзвінком або повідомленням про доставку їжі</p>
+        </div>
+    </div>
+    <hr style="margin-top: 70px; margin-bottom:70px;">
+    <h1 style="margin-top: 70px; margin-left: 100px; font-size: 200%;">Відгуки</h1>
+    <div class="feedback-image">
+    <img src="Images/Відгуки.png" alt="Feedback">
+    </div>
+    <div class="feedback-container">
+        <div class="feedback">
+            <img src="Images/Фото профілю.svg" alt="Profile">
+            <form action="textbox">
+                <input type="text" placeholder="Напишіть відгук">
+            </form>
+            <button class="feedback-button">Опублікувати</button>
+        </div>
+    </div>
+    <div class="feedback-container" style="margin-top: 100px;">
+        <div class="feedback">
+            <img src="Images/Фото профілю.svg" alt="Profile">
+            <div class="feedback-rectangle">
+                <p>Додаток дуже зручний та інтуїтивно зрозумілий. Замовлення приходять швидко і без зайвих запитань!</p>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+            <div class="footer-container">
+                <a href="/Code/index.html"><img src="Images/Логотип.svg" alt="logo" width="200" height="90"></a>
+                <div class="mail">
+                    <a href="https://mail.google.com/" target="_blank">
+                        <img src="Images/Group M.svg" alt="mail">
+                    </a>
+                </div>
+                <div class="social-networks">
+                    <a href="https://www.viber.com/ru/" target="_blank">
+                        <p style="float: left; margin-right: 5px;"></p>
+                        <img src="Images/Group 21.svg" alt="viber">
+                    </a>
+                </div>
+                <div class="social-networks">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <p style="float: left; margin-right: 5px;"></p>
+                        <img src="Images/Group 22.svg" alt="insta">
+                    </a>
+                </div>
+                <div class="phone-number">
+                    <p>Номери телефону: </p>
+                    <p>(095) 000 00 00 | (097) 000 00 00</p>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>
